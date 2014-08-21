@@ -1,0 +1,569 @@
+/*
+Theme Name: ETICAGNU Main
+Theme URI: http://eticagnu.org
+Author: WEtiCA of ETICAGNU
+Author URI: http://eticagnu.org/
+Description: Tema para la web principal de ETICAGNU
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
+Text Domain: eticagnumain
+*/
+blockquote {
+  clear: both;
+}
+table {
+  min-width: 100%;
+}
+form {
+  margin: 20px 0;
+}
+/* Alignment */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 20px;
+}
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 20px;
+}
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto;
+}
+/* Text meant only for screen readers */
+.assistive-text {
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+}
+/* =Menu
+----------------------------------------------- */
+.main-navigation {
+  background-color: #d40000;
+  clear: both;
+  display: block;
+  font-size: 15px;
+  padding: 10px 0;
+  width: 100%;
+}
+.main-navigation .menu {
+  margin: 0;
+  padding: 0;
+}
+.main-navigation ul {
+  list-style: none;
+}
+.main-navigation ul ul {
+  padding: 0 0 0 20px;
+}
+.main-navigation a {
+  color: #FFF;
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+}
+.main-navigation a:hover {
+  background-color: #bb0000;
+}
+.main-navigation li.current_page_item a,
+.main-navigation li.current-menu-item a {
+  background-color: #bb0000;
+}
+@media (min-width: 992px) {
+  .main-navigation {
+    min-height: 50px;
+  }
+  .main-navigation ul {
+    margin: 0;
+    padding: 0;
+  }
+  .main-navigation ul > li {
+    margin-right: 10px;
+  }
+  .main-navigation li {
+    float: left;
+    position: relative;
+  }
+  .main-navigation li a {
+    padding: 5px 10px;
+  }
+  .main-navigation ul ul {
+    background-color: #d40000;
+    -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    display: none;
+    float: left;
+    padding: 10px 0;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index: 99999;
+  }
+  .main-navigation ul ul ul {
+    left: 100%;
+    top: 0;
+  }
+  .main-navigation ul ul a {
+    width: 200px;
+  }
+  .main-navigation li:hover > a {
+    background-color: #bb0000;
+  }
+  .main-navigation ul li:hover > ul {
+    display: block;
+  }
+  /* Small menu */
+  .menu-toggle {
+    cursor: pointer;
+  }
+  .main-small-navigation .menu {
+    display: none;
+  }
+}
+/* =Content
+----------------------------------------------- */
+.hentry {
+  margin: 40px 0 20px;
+}
+.hentry:first-child {
+  margin-top: 0;
+}
+.entry-meta {
+  clear: both;
+  margin-top: 10px;
+  font-style: italic;
+}
+.byline {
+  display: none;
+}
+.single .byline,
+.group-blog .byline {
+  display: inline;
+}
+.entry-content,
+.entry-summary {
+  margin: 20px 0 0;
+}
+.page-links {
+  clear: both;
+  margin: 0 0 20px;
+}
+/* =Asides
+----------------------------------------------- */
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+  display: none;
+}
+/* =Media
+----------------------------------------------- */
+.site-header img,
+.entry-content img,
+.comment-content img,
+.widget img {
+  max-width: 100%;
+  /* Fluid images for posts, comments, and widgets */
+}
+.site-header img,
+.entry-content img,
+img[class*="align"],
+img[class*="wp-image-"] {
+  height: auto;
+  /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+.site-header img,
+.entry-content img,
+img.size-full {
+  max-width: 100%;
+  width: auto;
+  /* Prevent stretching of full-size images with height and width attributes in IE8 */
+}
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+.wp-caption {
+  border: 1px solid #ccc;
+  clear: both;
+  margin-bottom: 20px;
+  max-width: 100%;
+  text-align: center;
+}
+.wp-caption img {
+  display: block;
+  margin: 5px auto 0;
+  max-width: calc(100% - 10px);
+}
+.wp-caption-text {
+  text-align: center;
+}
+.wp-caption .wp-caption-text {
+  margin: 10px 0;
+}
+.site-content .gallery {
+  margin-bottom: 20px;
+}
+.site-content .gallery a img {
+  border: none;
+  height: auto;
+  max-width: 90%;
+}
+.site-content .gallery dd {
+  margin: 0;
+}
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+/* =Navigation
+----------------------------------------------- */
+.site-content .site-navigation {
+  background-color: #f3f3f3;
+  margin: 0 0 20px;
+  padding: 10px;
+  overflow: hidden;
+}
+.site-content .nav-previous .meta-nav-msg,
+.site-content .nav-next .meta-nav-msg {
+  color: #676767;
+}
+.site-content .nav-previous a,
+.site-content .nav-next a {
+  color: #d40000;
+}
+/* =Comments
+----------------------------------------------- */
+/* =Widgets
+----------------------------------------------- */
+.widget {
+  margin: 0 0 20px;
+}
+/* Search widget */
+#searchsubmit {
+  display: none;
+}
+/** 	End standars	**/
+#network-navigation {
+  background-color: #000;
+}
+#network-navigation .container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#network-navigation .container ul li {
+  display: inline-block;
+}
+#network-navigation .container ul li a {
+  color: #FFF;
+  display: block;
+  padding: 5px;
+}
+header#masthead hgroup {
+  padding: 20px 20px 0;
+}
+header#masthead hgroup h1 {
+  font-weight: 700;
+}
+header#masthead hgroup h2 {
+  margin-top: 10px;
+}
+main {
+  background-color: #f8f8f8;
+}
+#primary {
+  margin: 20px 0;
+}
+#primary #content {
+  background-color: #FFF;
+}
+#primary h1,
+#primary h2,
+#primary h3,
+#primary h4,
+#primary h5,
+#primary h6 {
+  clear: both;
+}
+#secondary {
+  /* Sidebar 1 */
+  margin: 20px 0 0;
+  overflow: hidden;
+}
+#secondary aside {
+  background-color: #FFF;
+}
+#tertiary {
+  /* Sidebar 2 */
+  background-color: #4d4d4d;
+  clear: both;
+  width: 100%;
+}
+#tertiary .tertiary-part {
+  overflow: hidden;
+  vertical-align: top;
+}
+#tertiary .tertiary-part aside {
+  color: #FFF;
+  margin: 0 0 20px;
+}
+#tertiary .tertiary-part aside .widget-title {
+  color: #EEE;
+}
+#tertiary .tertiary-part aside ul {
+  margin: 0;
+  padding: 0;
+}
+#tertiary .tertiary-part aside ul li {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+#tertiary .tertiary-part aside ul ul {
+  margin-left: 10px;
+}
+#tertiary .tertiary-part aside a {
+  color: #FFF;
+}
+#colophon {
+  background-color: #4d4d4d;
+  padding: 0 0 20px 0;
+}
+#colophon .site-footer {
+  clear: both;
+  width: 100%;
+}
+/** 	End structure	**/
+#network-navigation .container a {
+  display: none;
+}
+#network-navigation .container a img {
+  display: block;
+  margin: 5px 0;
+}
+#network-navigation .container nav {
+  text-align: center;
+}
+header#masthead hgroup {
+  text-align: center;
+}
+header#masthead hgroup h2 {
+  clear: both;
+  font-size: 20px;
+}
+.main-navigation .menu-toggle {
+  background-color: #bb0000;
+  border: 0 none;
+  color: #FFF;
+  font-weight: bold;
+  padding: 5px 15px;
+}
+.main-navigation .nav-menu {
+  display: none;
+}
+.main-navigation.toggled .menu-toggle {
+  margin-bottom: 10px;
+}
+.main-navigation.toggled .nav-menu {
+  display: block;
+}
+.entry-header h1 {
+  font-weight: 300;
+}
+.entry-header h1 a {
+  color: #d40000;
+}
+.entry-meta {
+  text-align: center;
+}
+.entry-meta a {
+  color: #000;
+}
+header .entry-meta {
+  margin-top: 10px;
+}
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+  font-weight: 600;
+}
+.entry-content a {
+  color: #d40000;
+}
+.entry-content img.thumbnail {
+  display: block;
+  margin: 0 auto 10px;
+}
+article .projects .project {
+  margin-top: 20px;
+  text-align: center;
+}
+article .projects .project img {
+  height: 100px;
+  margin-bottom: 10px;
+}
+article .projects .project h3.project-title {
+  clear: none !important;
+}
+article .projects .project .project-content {
+  clear: both;
+}
+article .sharedaddy {
+  text-align: center;
+}
+#content #comments h2.comments-title {
+  font-weight: 300;
+}
+#content #comments h2.comments-title span {
+  font-style: italic;
+}
+#content #comments ol.commentlist {
+  list-style: none outside;
+  margin: 0;
+  padding: 0;
+}
+#content #comments ol.commentlist ul.children {
+  list-style: none outside;
+  padding-left: 20px;
+}
+#content #comments ol.commentlist li article {
+  margin-bottom: 30px;
+}
+#content #comments ol.commentlist li article footer .comment-author img {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+#content #comments ol.commentlist li article footer .comment-author cite {
+  font-weight: bold;
+}
+#content #comments ol.commentlist li article .comment-content {
+  clear: both;
+}
+#content #comments #respond h3#reply-title {
+  font-weight: 300;
+}
+#content #comments #respond #commentform {
+  margin-bottom: 15px;
+}
+aside.widget {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+aside.widget .widget-title {
+  margin-top: 0;
+}
+aside.widget input,
+aside.widget textarea,
+aside.widget select,
+aside.widget button,
+aside.widget textarea {
+  color: #333;
+  width: 100% !important;
+}
+aside.widget a {
+  color: #d40000;
+}
+aside.widget :last-child {
+  margin-bottom: 0;
+}
+footer aside.widget a {
+  color: #FFF;
+}
+@media (min-width: 768px) {
+  #network-navigation .container a {
+    display: block;
+    float: left;
+  }
+  #network-navigation .container a img {
+    height: 20px;
+    margin: 5px 0;
+  }
+  #network-navigation .container nav {
+    text-align: right;
+  }
+  #network-navigation .container nav ul {
+    margin-left: 45px;
+  }
+  #network-navigation .container nav ul li a {
+    height: 30px;
+    line-height: 20px;
+  }
+  article:nth-child(2n) img.thumbnail {
+    float: left;
+    margin-right: 20px;
+  }
+  article:nth-child(2n+1) img.thumbnail {
+    float: right;
+    margin-left: 20px;
+  }
+  article .entry-meta {
+    margin-left: 20px;
+    text-align: left;
+  }
+  article .sharedaddy {
+    margin-left: 20px !important;
+    text-align: left;
+  }
+  article .projects .project {
+    text-align: left;
+  }
+  article .projects .project img {
+    float: left;
+    margin-right: 20px;
+  }
+  article .projects .project:nth-child(2n+1) {
+    clear: left;
+  }
+  #tertiary .col-sm-6:nth-child(2n+1) {
+    clear: left;
+  }
+}
+@media (min-width: 992px) {
+  #network-navigation .container a img {
+    height: 30px;
+  }
+  #network-navigation .container nav ul li a {
+    line-height: 30px;
+  }
+  header#masthead hgroup {
+    text-align: left;
+  }
+  header#masthead hgroup a {
+    float: left;
+  }
+  header#masthead hgroup a img {
+    margin-bottom: 10px;
+    margin-right: 20px;
+  }
+  header#masthead hgroup h2 {
+    clear: both;
+    font-size: 30px;
+  }
+  .main-navigation .menu-toggle {
+    display: none;
+  }
+  .main-navigation .nav-menu {
+    display: block;
+  }
+  #tertiary .col-sm-6:nth-child(2n+1) {
+    clear: none;
+  }
+  #tertiary .col-md-3:nth-child(4n+1) {
+    clear: left;
+  }
+}
+/*# sourceMappingURL=style.css.map */

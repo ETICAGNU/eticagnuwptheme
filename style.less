@@ -1,0 +1,405 @@
+/*
+Theme Name: ETICAGNU Main
+Theme URI: http://eticagnu.org
+Author: WEtiCA of ETICAGNU
+Author URI: http://eticagnu.org/
+Description: Tema para la web principal de ETICAGNU
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
+Text Domain: eticagnumain
+*/
+
+@red : #D40000;
+@gray: #4D4D4D;
+
+@import "./globals.less";
+@import "./standars.less";
+@import "./structure.less";
+
+#network-navigation {
+	.container {
+
+		a {
+			display: none;
+
+			img {
+				display: block;
+				margin: 5px 0;
+			}
+		}
+
+		nav {
+			text-align: center;
+
+			ul {
+
+				li {
+					a {
+					}
+				}
+			}
+		}
+	}
+}
+
+header#masthead {
+	hgroup {
+		text-align: center;
+
+		a {
+
+		}
+
+		h1 {
+
+		}
+
+		h2 {
+			clear: both;
+			font-size: 20px;
+		}
+	}
+}
+
+.main-navigation {
+	.menu-toggle {
+		background-color: darken(@red, 5%);
+		border: 0 none;
+		color: #FFF;
+		font-weight: bold;
+		padding: 5px 15px;
+	}
+
+	.nav-menu {
+		display: none;
+	}
+
+	&.toggled {
+		.menu-toggle {
+			margin-bottom: 10px;
+		}
+
+		.nav-menu {
+			display: block;
+		}
+	}
+}
+
+.entry-header {
+	h1 {
+		font-weight: 300;
+
+		a {
+			color: @red;
+		}
+	}
+}
+
+.entry-meta {
+	text-align: center;
+
+	a {
+		color: #000;
+	}
+}
+
+header {
+	.entry-meta {
+		margin-top: 10px;
+	}
+}
+
+.entry-content {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-weight: 600;
+	}
+
+	a {
+		color: @red;
+	}
+
+	img.thumbnail {
+		display: block;
+		margin: 0 auto 10px;
+	}
+}
+
+article {
+	.projects {
+		.project {
+			margin-top: 20px;
+			text-align: center;
+
+			img {
+				height: 100px;
+				margin-bottom: 10px;
+			}
+
+			h3.project-title {
+				clear: none !important;
+			}
+
+			.project-content {
+				clear: both;
+			}
+		}
+	}
+
+	.sharedaddy {
+		text-align: center;
+	}
+}
+
+#content {
+	#comments {
+		h2.comments-title {
+			font-weight: 300;
+			
+			span {
+				font-style: italic;
+			}
+		}
+		
+		ol.commentlist {
+			list-style: none outside;
+			margin: 0;
+			padding: 0;
+			
+			ul.children {
+				list-style: none outside;
+				padding-left: 20px;
+			}
+			
+			li {
+				article {
+					margin-bottom: 30px;
+					
+					footer {
+						.comment-author {
+							img {
+								float: left;
+								margin: 0 10px 10px 0;
+							}
+							
+							cite {
+								font-weight: bold;
+							}
+						}
+					}
+					
+					.comment-content {
+						clear: both;
+					}
+					
+					.reply {
+						
+					}
+				}
+			}
+		}
+		
+		#respond {
+			h3#reply-title {
+				font-weight: 300;
+			}
+			
+			#commentform {
+				margin-bottom:15px;
+			}
+		}
+	}
+}
+
+aside.widget {
+	padding-bottom: 15px;
+	padding-top: 15px;
+
+	.widget-title {
+		margin-top: 0;
+	}
+
+	input,
+	textarea,
+	select,
+	button,
+	textarea {
+		color: #333;
+		width: 100% !important;
+	}
+
+	a {
+		color: @red;
+	}
+
+	:last-child {
+		margin-bottom: 0;
+	}
+}
+
+footer {
+	aside.widget {
+		a {
+			color: #FFF;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	#network-navigation {
+		.container {
+
+			a {
+				display: block;
+				float: left;
+
+				img {
+					height: 20px;
+					margin: 5px 0;
+				}
+			}
+
+			nav {
+				text-align: right;
+
+				ul {
+					margin-left: 45px;
+
+					li {
+						a {
+							height: 30px;
+							line-height: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	article {
+		&:nth-child(2n) {
+			img.thumbnail {
+				float: left;
+				margin-right: 20px;
+			}
+		}
+		&:nth-child(2n+1) {
+			img.thumbnail {
+				float: right;
+				margin-left: 20px;
+			}
+		}
+
+		.entry-meta {
+			margin-left: 20px;
+			text-align: left;
+		}
+		
+		.sharedaddy {
+			margin-left: 20px !important;
+			text-align: left;
+		}
+
+		.projects {
+
+			.project {
+				text-align: left;
+
+				img {
+					float: left;
+					margin-right: 20px;
+				}
+
+				&:nth-child(2n+1) {
+					clear: left;
+				}
+			}
+		}
+	}
+
+	#tertiary {
+		.col-sm-6 {
+			&:nth-child(2n+1) {
+				clear: left;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	#network-navigation {
+		.container {
+
+			a {
+				img {
+					height: 30px;
+				}
+			}
+
+			nav {
+				ul {
+
+					li {
+						a {
+							line-height: 30px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	header#masthead {
+
+		hgroup {
+			text-align: left;
+
+			a {
+				float: left;
+
+				img {
+					margin-bottom: 10px;
+					margin-right: 20px;
+				}
+			}
+
+			h2 {
+				clear: both;
+				font-size: 30px;
+			}
+		}
+	}
+
+	.main-navigation {
+		.menu-toggle {
+			display: none;
+		}
+
+		.nav-menu {
+			display: block;
+		}
+	}
+
+	#tertiary {
+		.col-sm-6 {
+			&:nth-child(2n+1) {
+				clear: none;
+			}
+		}
+
+		.col-md-3 {
+			&:nth-child(4n+1) {
+				clear: left;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+}
