@@ -33,7 +33,7 @@ the_post();
 							<h3 class="project-title"><?php the_title() ?></h3>
 
 							<p>
-								<a rel="follow" target="_blank" href="http://<?php the_field('sitio_web') ?>.eticagnu.org/">http://<?php the_field('sitio_web') ?>.eticagnu.org/</a>
+								<a rel="follow" href="http://<?php the_field('sitio_web') ?>.eticagnu.org/">http://<?php the_field('sitio_web') ?>.eticagnu.org/</a>
 							</p>
 
 							<div class="project-content">
